@@ -1,5 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import Column, Integer, String, DateTime
+from sqlalchemy import Column, Integer, String, DateTime, ForeignKey
+from sqlalchemy.orm import backref, relationship
 import os
 
 # database_name = "capstone"
@@ -80,3 +81,12 @@ class Actor(db.Model):
             'age': self.age,
             'gender': self.gender
         }
+
+
+class Role(db.Model):
+    actor_id = Column(Integer, ForeignKey(Actor.id), primary_key=True)
+    movie_id = Column(Integer, ForeignKey(Movie.id), primary_key=True)
+    role = Column(String)
+
+    actor = relationship(Actor, backref=backref('Roles', cascade='all, delete'))
+    movie = relationship(Movie, backref=backref('Roles', cascade='all, delete'))
