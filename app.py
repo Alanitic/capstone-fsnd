@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, request, abort, jsonify
 from flask_cors import CORS
 from flask_migrate import Migrate
@@ -189,4 +191,4 @@ def create_app():
 APP = create_app()
 
 if __name__ == '__main__':
-    APP.run(host='127.0.0.1', port=8080, debug=True)
+    APP.run(debug=True)
