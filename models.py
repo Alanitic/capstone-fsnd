@@ -3,9 +3,6 @@ from sqlalchemy import Column, Integer, String, DateTime, ForeignKey
 from sqlalchemy.orm import backref, relationship
 import os
 
-# database_name = "capstone"
-# database_path = "postgresql://{}/{}".format('localhost:5432', database_name)
-
 database_path = os.environ['DB_URL']
 
 db = SQLAlchemy()

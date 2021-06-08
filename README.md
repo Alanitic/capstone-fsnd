@@ -238,8 +238,18 @@ Response
 
 ## Testing
 
+Using Postman
+
 The testing file `postman-test.json` should be imported from postman and run all needed tests.
 
 For testing local aim to `http://127.0.0.1:5000`
 
 For testing with aws aim to ` http://capstonefsnd-env.eba-mhvshfmh.us-east-2.elasticbeanstalk.com/`
+
+Using Unit test
+
+```console
+$ python test_app.py
+```
+
+Note: for DELETE test cases to work propertly update the id for an existing one in your db-test.

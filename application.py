@@ -11,10 +11,8 @@ def create_app():
     # create and configure the app
     app = Flask(__name__)
     setup_db(app)
-    migrate = Migrate(app, db)
+    Migrate(app, db)
     CORS(app)
-
-    setup_db(app)
 
     @app.after_request
     def after_request(response):
