@@ -23,6 +23,10 @@ def create_app():
 
         return response
 
+    @app.route('/')
+    def get_home():
+        return jsonify({'message': 'Welcome to my app'})
+
     @app.route('/actors')
     @requires_auth('get:actors')
     def get_actors(jwt):
