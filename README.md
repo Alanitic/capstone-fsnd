@@ -239,3 +239,7 @@ Response
 ## Testing
 
 The testing file `postman-test.json` should be imported from postman and run all needed tests.
+
+For testing local aim to `http://127.0.0.1:5000`
+
+For testing with aws aim to ` http://capstonefsnd-env.eba-mhvshfmh.us-east-2.elasticbeanstalk.com/`
