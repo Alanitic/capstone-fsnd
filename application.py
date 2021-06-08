@@ -188,7 +188,7 @@ def create_app():
     return app
 
 
-APP = create_app()
+application = create_app()
 
 if __name__ == '__main__':
-    APP.run(debug=True)
+    application.run(debug=True)
